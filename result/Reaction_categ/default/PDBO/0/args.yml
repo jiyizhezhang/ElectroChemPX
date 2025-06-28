@@ -1,0 +1,35 @@
+general:
+  problem: Reaction_categ
+  n_var: 8
+  n_obj: 2
+  n_init_sample: 20
+  n_iter: 10
+  ref_point: null
+  batch_size: 1
+  seed: 0
+  n_seed: 10
+  algo: PDBO
+  subfolder: default
+  exp_name: null
+  log_to_file: false
+  n_process: 1
+surrogate:
+  surrogate: gp
+  n_spectral_pts: 100
+  nu: 5
+  mean_sample: false
+  n_var: 8
+  n_obj: 2
+acquisition:
+  acquisition: EI
+solver:
+  solver: nsga2
+  pop_size: 100
+  n_gen: 10
+  pop_init_method: nds
+  n_process: 8
+  batch_size: 1
+  n_obj: 2
+selection:
+  selection: dpp
+  batch_size: 1
